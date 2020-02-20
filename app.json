@@ -1,0 +1,14 @@
+{
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "env": {
+    "DATABASE_URL": "postgres://jrpngwcdvtrgqq:3c778a021331ac5ef23d3ed187eba6af9676c361e0c2de756390af4c52621bd7@ec2-3-229-210-93.compute-1.amazonaws.com:5432/dm3h1obq216f4"
+  },
+  "environments": {
+    "review": {
+      "addons": ["heroku-postgresql:hobby-dev"],
+      "scripts": {
+        "postdeploy": "bundle exec rake db:migrate"
+      }
+    }
+  }
+}
